@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="620" viewBox="0 0 1280 620" role="img" aria-labelledby="title desc">
+<title id="title">bible.rs</title><desc id="desc">The Bible, rewritten in Rust. 66 books. Zero dependencies. One eternal lifetime. An implementation of From Water for Wine appears beside the title.</desc>
+<rect width="1280" height="620" fill="#f1ede3"/>
+<path d="M48 42H1232M48 48H1232M48 568H1232" stroke="#b9b2a0" fill="none"/>
+<text x="56" y="93" fill="#a7472c" font-family="Menlo,monospace" font-size="15" letter-spacing="2">THE UNNECESSARY REWRITE</text>
+<text x="56" y="247" fill="#202820" font-family="Georgia,serif" font-size="116" letter-spacing="-5">bible<tspan fill="#a7472c">.rs</tspan></text>
+<text x="60" y="306" fill="#202820" font-family="Georgia,serif" font-size="29">The Bible, rewritten in Rust.</text>
+<text x="60" y="385" fill="#77766b" font-family="Menlo,monospace" font-size="19">66 books.</text>
+<text x="60" y="416" fill="#77766b" font-family="Menlo,monospace" font-size="19">Zero dependencies.</text>
+<text x="60" y="447" fill="#77766b" font-family="Menlo,monospace" font-size="19">One eternal lifetime.</text>
+<text x="60" y="524" fill="#a7472c" font-family="Georgia,serif" font-size="23" font-style="italic">It compiles. The miracles have tests.</text>
+<rect x="624" y="133" width="608" height="378" rx="7" fill="#202820"/>
+<path d="M648 186H1208" stroke="#455047"/>
+<text x="652" y="166" fill="#cdb781" font-family="Menlo,monospace" font-size="14" letter-spacing="1">JOHN 2:1–11 / SAFE CONVERSION</text>
+<g font-family="Menlo,monospace" font-size="21" xml:space="preserve">
+<text x="654" y="231" fill="#dedbd0"><tspan fill="#d99178">impl</tspan> From&lt;Water&gt; <tspan fill="#d99178">for</tspan> Wine {</text>
+<text x="654" y="268" fill="#dedbd0">  <tspan fill="#d99178">fn</tspan> <tspan fill="#cdb781">from</tspan>(water: Water) -&gt; Self {</text>
+<text x="654" y="305" fill="#dedbd0">    Self {</text>
+<text x="654" y="342" fill="#dedbd0">      firkins: water.firkins,</text>
+<text x="654" y="379" fill="#dedbd0">    }</text>
+<text x="654" y="416" fill="#dedbd0">  }</text>
+<text x="654" y="453" fill="#dedbd0">}</text>
+</g>
+<text x="56" y="597" fill="#77766b" font-family="Menlo,monospace" font-size="13" letter-spacing="1">KING JAMES VERSION / ORIGINAL RUST ADAPTATION</text>
+<text x="1230" y="597" text-anchor="end" fill="#77766b" font-family="Menlo,monospace" font-size="13">EST. GENESIS 1:1</text>
+</svg>

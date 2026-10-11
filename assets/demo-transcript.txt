@@ -1,0 +1,49 @@
+$ cargo run --quiet -- demo creation
+
+CREATION
+creation / Genesis 1:1-2:3
+  Rust: state transitions; day seven makes no creation changes
+  day 1  light                   revisions=1
+  day 2  firmament               revisions=2
+  day 3  land + plants           revisions=3
+  day 4  sun + moon + stars      revisions=4
+  day 5  fish + birds            revisions=5
+  day 6  animals + humankind     revisions=6
+  day 7  rest                    revisions=6
+
+$ cargo run --quiet -- demo eden
+
+EDEN
+eden / Genesis 3:1-7
+  Rust: move semantics and Result; memory safety cannot enforce obedience
+  Eve eats: Err(Disobedience)
+  Eve transfers the remaining fruit to Adam.
+  Adam eats: Err(Disobedience)
+  fallen: Eve=true, Adam=true
+  The compiler permitted this. The commandment did not.
+
+$ cargo run --quiet -- demo exodus
+
+EXODUS
+exodus / Exodus 14:21-31
+  Rust: RAII: the sea closes when the passage leaves scope
+  crossed: Israel
+  passage dropped; sea parted=false
+
+$ cargo run --quiet -- demo cana
+
+CANA
+cana / John 2:1-11
+  Rust: From<Water> for Wine; ownership transfers without unsafe
+  6 waterpots converted
+  12 firkins of wine
+  No transmute. No dependencies. Unexpectedly good vintage.
+
+$ cargo run --quiet -- demo revelation
+
+REVELATION
+revelation / Revelation 21:1-5
+  Rust: a consuming migration from World<Former> to World<Renewed>
+  death=false sorrow=false sea=false
+  tears=0
+  Former world consumed. No rollback implemented.

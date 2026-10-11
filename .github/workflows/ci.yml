@@ -1,0 +1,43 @@
+name: Let there be CI
+on:
+  push:
+    branches: [main]
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    name: Test / ${{ matrix.os }} / ${{ matrix.rust }}
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - os: ubuntu-latest
+            rust: stable
+          - os: macos-latest
+            rust: stable
+          - os: windows-latest
+            rust: stable
+          - os: ubuntu-latest
+            rust: 1.85.0
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - name: Install Rust
+        run: rustup toolchain install ${{ matrix.rust }} --profile minimal
+      - name: Test the canon and compile-fail examples
+        run: cargo +${{ matrix.rust }} test --locked
+      - name: Validate passage references
+        run: cargo +${{ matrix.rust }} run --locked -- check
+  lint:
+    name: Format and Clippy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          persist-credentials: false
+      - run: rustup toolchain install stable --profile minimal --component rustfmt --component clippy
+      - run: cargo +stable fmt --check
+      - run: cargo +stable clippy --locked --all-targets -- -D warnings

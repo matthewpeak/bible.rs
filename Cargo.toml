@@ -1,0 +1,25 @@
+[package]
+name = "bible-rs"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "The Bible, rewritten in Rust. 66 books. Zero dependencies. One eternal lifetime."
+license = "MIT"
+repository = "https://github.com/matthewpeak/bible.rs"
+keywords = ["bible", "rust", "humor", "literature", "kjv"]
+categories = ["command-line-utilities"]
+publish = false
+
+[[bin]]
+name = "bible"
+path = "src/main.rs"
+
+[lints.rust]
+unsafe_code = "forbid"
+
+[lints.clippy]
+all = "warn"
+
+[profile.release]
+lto = true
+strip = true
